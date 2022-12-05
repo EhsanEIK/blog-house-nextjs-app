@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import styles from '../../styles/Home.module.css'
 
@@ -19,6 +20,7 @@ const index = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
