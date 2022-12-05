@@ -1,9 +1,13 @@
+import Head from "next/head";
 import Navbar from "../../components/Navbar/Navbar";
 import styles from '../../styles/Home.module.css'
 
 const index = () => {
     return (
         <div className={styles.container}>
+            <Head>
+                <title>About-Blog House</title>
+            </Head>
             <Navbar></Navbar>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
