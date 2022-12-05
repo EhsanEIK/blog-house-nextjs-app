@@ -26,7 +26,7 @@ const index = ({ blogs }) => {
 
 export default index;
 
-// load all the blogs from api
+// loaded all the blogs from api
 export const getStaticProps = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await res.json();
