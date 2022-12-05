@@ -13,7 +13,7 @@ const index = ({ users }) => {
             <Navbar></Navbar>
             <div>
                 <h1 className="text-5xl text-center font-bold mt-5 mb-10">All Users</h1>
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                     {
                         users.map(user => <User
                             key={user.id}

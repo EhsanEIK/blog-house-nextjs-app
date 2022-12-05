@@ -9,6 +9,9 @@ const blogDetails = ({ blog }) => {
         router.push('/blogs');
     }
 
+    // const id = router.query.blogId;
+    // console.log(id)
+
     return (
         <div>
             <Head>
