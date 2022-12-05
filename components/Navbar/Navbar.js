@@ -17,7 +17,9 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-red-600 text-3xl font-semibold uppercase">Blog House</a>
+                <a className="btn btn-ghost text-red-600 text-3xl font-semibold uppercase">
+                    <img src='/logo.jpg' alt="" className="w-20 h-10" />
+                    House</a>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
