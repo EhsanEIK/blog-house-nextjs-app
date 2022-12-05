@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Blog = ({ blog }) => {
     return (
         <div className="card w-96 bg-primary text-primary-content">
@@ -5,7 +7,9 @@ const Blog = ({ blog }) => {
                 <h2 className="card-title">{blog.title}</h2>
                 <p>{blog.body}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn">See More</button>
+                    <Link href={`/blogs/${blog.id}`}>
+                        <button className="btn">See More</button>
+                    </Link>
                 </div>
             </div>
         </div>
