@@ -15,3 +15,21 @@ const blogDetails = () => {
 };
 
 export default blogDetails;
+
+// loaded all the paths of blogId from api
+export const getStaticPaths = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const blogs = await res.json();
+
+    const paths = blogs.map(blog => {
+        return {
+            params: {
+                blogId: `${blog.id}`,
+            }
+        }
+    })
+    return {
+        paths,
+        fallback: false,
+    }
+}
