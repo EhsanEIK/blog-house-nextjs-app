@@ -16,6 +16,20 @@ const blogDetails = () => {
 
 export default blogDetails;
 
+// loaded single blog details
+export const getStaticProps = async (context) => {
+    const { params } = context;
+
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.blogId}`);
+    const data = await res.json();
+
+    return {
+        props: {
+            blog: data,
+        }
+    }
+}
+
 // loaded all the paths of blogId from api
 export const getStaticPaths = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
