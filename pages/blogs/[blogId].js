@@ -1,8 +1,14 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
 const blogDetails = ({ blog }) => {
+    const router = useRouter();
+    const handleBack = () => {
+        router.push('/blogs');
+    }
+
     return (
         <div>
             <Head>
@@ -17,6 +23,9 @@ const blogDetails = ({ blog }) => {
                         <p>{blog.body}</p>
                         <p>User ID: {blog.userId}</p>
                     </div>
+                </div>
+                <div className="flex justify-center my-5">
+                    <button onClick={handleBack} className="btn btn-outline">Go Back</button>
                 </div>
             </div>
             <Footer></Footer>
