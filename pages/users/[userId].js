@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 
@@ -27,7 +28,9 @@ const userDetails = ({ user }) => {
                     </div>
                 </div>
                 <div className="flex justify-center my-5">
-                    <button className="btn btn-outline">Go Back</button>
+                    <Link href='/users'>
+                        <button className="btn btn-outline">Go Back</button>
+                    </Link>
                 </div>
             </div>
             <Footer></Footer>
