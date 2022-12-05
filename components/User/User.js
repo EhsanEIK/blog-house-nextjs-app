@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const User = ({ user }) => {
     return (
-        <div className="card w-96 bg-primary text-primary-content">
+        <div className="card md:w-96 w-full bg-primary text-primary-content">
             <div className="card-body">
                 <h2 className="card-title">{user.name}</h2>
                 <p>{user.email}</p>
